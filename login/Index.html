@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #ffcccc, #ff9999);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .form-container {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            border: 2px solid #ff6666;
+            width: 300px;
+        }
+        
+        .form-container input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 5px;
+        }
+        
+        .form-container input[type="submit"] {
+            background: #ff6666;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+        }
+        
+        .form-container input[type="submit"]:hover {
+            background: #ff3333;
+            transform: scale(1.05);
+        }
+        
+        label {
+            font-size: medium;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <form name="myForm" onsubmit="return validateForm()" method="post">
+            <label for="">Name:</label> <input type="text" name="name"><br>
+            <label for="">Password:</label> <input type="password" name="password"><br>
+            <label for="">Confirm Password:</label><input type="password" name="confirmPassword"><br> <label for="">Email:</label> <input type="text" name="email"><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+
+</html>

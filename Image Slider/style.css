@@ -1,0 +1,103 @@
+body {
+    height: 100vh;
+    /* background-image: url(living-room-interior.jpg)no-repeat center center/cover; */
+    display: flex;
+    margin-left: 240px;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* backdrop-filter: blur(80%); */
+    background: linear-gradient(to left, #ff5733, #6d3cc5);
+    /* Gradient colors and direction */
+}
+
+.slideshow-container {
+    max-width: 500px;
+    /* Set the maximum width of the slideshow container */
+    position: relative;
+    /* Position the container */
+    margin: 50px;
+    /* Center the container horizontally */
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    /* text-align: center; */
+    padding: 20px;
+    /* color: white; */
+}
+
+.mySlides {
+    display: none;
+    /* Hide the individual slides by default */
+}
+
+img {
+    width: 700px;
+    height: 70vh;
+    border-radius: 10px;
+    /* Set the width of each image to 100% of the slide */
+}
+
+
+/* Add additional styles as needed */
+
+.dot-container {
+    text-align: center;
+    /* Center align the dots */
+    margin-top: 20px;
+    /* Add some margin to separate the dots from the images */
+    position: absolute;
+    top: 400px;
+    left: 300px;
+}
+
+.dot {
+    height: 15px;
+    /* Set the dot's height */
+    width: 15px;
+    /* Set the dot's width */
+    background-color: #bbb;
+    /* Define the default background color */
+    border-radius: 50%;
+    /* Make the dot circular */
+    display: inline-block;
+    /* Display the dots inline */
+    margin: 0 5px;
+    /* Add some space between the dots */
+    cursor: pointer;
+    /* Show a pointer cursor when hovering over the dots */
+}
+
+.dot.active {
+    background-color: #717171;
+    /* Change the background color when the dot is active */
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 25px;
+    padding: 10px;
+    background-color: #7171713a;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.prev {
+    left: -2;
+}
+
+.next {
+    right: -221px;
+}
